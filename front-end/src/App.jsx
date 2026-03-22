@@ -31,7 +31,7 @@ function App() {
   }
   function send() {
     setStatus(true);
-    axios.post("http://localhost:5000/sendmail", { msg: msg,emaillist:emaillist }).then((res) => {
+    axios.post("https://bulkmail-mt8z.onrender.com/sendmail", { msg: msg,emaillist:emaillist }).then((res) => {
       if (res.data === true) {
         alert("email sent successfully");
         setStatus(false);
