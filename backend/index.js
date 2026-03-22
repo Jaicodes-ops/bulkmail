@@ -4,7 +4,9 @@ const app = express();
 const nodemailer = require("nodemailer");
 const mongoose = require("mongoose");
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin:"*"
+}));
 mongoose
   .connect("mongodb+srv://jayarajraj81:12345@cluster0.6apn4ev.mongodb.net/passkey?appName=Cluster0")
   .then(function () {
